@@ -30,3 +30,4 @@ kotlin-js-store
 # Gradle ignores
 .gradle
 
+.vercel
