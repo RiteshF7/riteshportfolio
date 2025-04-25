@@ -5,7 +5,7 @@ out
 kotlin-js-store
 
 # Kobweb ignores
-.kobweb/*
+
 !.kobweb/conf.yaml
 !.kobweb/site
 
