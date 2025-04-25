@@ -5,11 +5,11 @@ import com.binayshaw7777.kotfolio.components.layouts.PageLayout
 import com.binayshaw7777.kotfolio.components.sections.About
 import com.binayshaw7777.kotfolio.components.sections.Experience
 import com.binayshaw7777.kotfolio.components.sections.Home
-import com.binayshaw7777.kotfolio.components.sections.Photography
 import com.binayshaw7777.kotfolio.components.sections.Project
 import com.binayshaw7777.kotfolio.components.sections.SkillsAndTools
 import com.binayshaw7777.kotfolio.utils.Res
 import com.binayshaw7777.kotfolio.utils.getElgoProject
+import com.binayshaw7777.kotfolio.utils.getPhotographProject
 import com.binayshaw7777.kotfolio.utils.getProCodeProject
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -39,11 +39,14 @@ fun HomePage() {
 
                     SkillsAndTools()
 
-                    Photography()
 
                     Project(getElgoProject())
 
                     Project(getProCodeProject())
+
+//                    Project(getPhotographProject())
+
+
                 }
             }
         }

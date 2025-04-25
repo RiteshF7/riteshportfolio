@@ -18,6 +18,28 @@ fun getElgoProject() = Project(
     getElgoProjectImages()
 )
 
+fun getPhotographProject() = Project(
+    Constants.PHOTOGRAPH_TITLE,
+    Constants.PHOTOGRAPH_SECTION_TEXT,
+    getPhotographProjectImages()
+)
+
+fun getPhotographProjectImages() = listOf(
+    Pair(Res.Images.IMAGE_1, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_2, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_3, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_4, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_5, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_6, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_7, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_8, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_9, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_10, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_11, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.IMAGE_12, Constants.PROJECT_ELGORITHM_URL),
+
+    )
+
 fun getProCodeProjectImages() = listOf(
 
     Pair(Res.Images.PROCODE_1, Constants.PROJECT_ELGORITHM_URL),
