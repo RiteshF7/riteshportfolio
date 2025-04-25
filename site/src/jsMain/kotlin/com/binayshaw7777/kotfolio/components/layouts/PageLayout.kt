@@ -92,7 +92,7 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
     }
 
     LaunchedEffect(title) {
-        document.title = "Binay Shaw - $title"
+        document.title = "Ritesh Singh - $title"
     }
 
     Box(
