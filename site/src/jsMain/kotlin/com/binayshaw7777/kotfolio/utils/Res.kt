@@ -47,7 +47,7 @@ object Res {
         const val TWITTER_X = "images/Socials/twitter-x.svg"
 
         // Photographs
-        const val IMAGE_1 = "images/Photographs/Image 1.jpg"
+        const val IMAGE_1 = "images/Photographs/Image 1.png"
         const val IMAGE_2 = "images/Photographs/Image 2.jpg"
         const val IMAGE_3 = "images/Photographs/Image 3.jpg"
         const val IMAGE_4 = "images/Photographs/Image 4.jpg"
