@@ -2,7 +2,7 @@ package com.binayshaw7777.kotfolio.utils
 
 object Constants {
     const val RESUME_URL =
-        "https://riteshresume-q13v3lkay-riteshf7s-projects.vercel.app/"
+        "https://riteshresume.vercel.app/"
     const val LINKEDIN_URL = "https://www.linkedin.com/in/sohlot163/"
     const val GITHUB_URL = "https://github.com/RiteshF7"
     const val TWITTER_URL = "https://twitter.com/binayplays7777"
