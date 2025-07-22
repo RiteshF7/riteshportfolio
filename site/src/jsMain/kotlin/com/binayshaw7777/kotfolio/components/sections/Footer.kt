@@ -43,9 +43,11 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import kotlinx.browser.document
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
+import org.w3c.dom.HTMLAnchorElement
 
 val FooterStyle by ComponentStyle.base {
     Modifier.padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
@@ -88,26 +90,10 @@ fun EmailButton(ctx: PageContext) {
 }
 
 @Composable
-fun ResumeButton() {
-    Link(
-        path = Constants.RESUME_URL,
-        text = "View Resume.",
-        modifier = Modifier
-            .fontFamily(Res.Fonts.DM_SANS)
-            .color(
-                when (ColorMode.current) {
-                    ColorMode.LIGHT -> Colors.Black
-                    ColorMode.DARK -> Colors.White
-                }
-            )
-    )
-}
-
-@Composable
-fun DownloadResume(ctx: PageContext) {
+fun DownloadResumeFromGitHub(ctx: PageContext) {
     Button(
         onClick = {
-            ctx.router.navigateTo(Constants.DOWNLOAD_RESUME)
+            triggerGitHubDownload(Constants.DOWNLOAD_RESUME)
         },
         colorScheme = CustomColorSchemes.BlackAndWhite,
         size = ButtonSize.MD,
@@ -121,11 +107,20 @@ fun DownloadResume(ctx: PageContext) {
 }
 
 
+fun triggerGitHubDownload(fileUrl: String) {
+    val anchor = document.createElement("a") as HTMLAnchorElement
+    anchor.href = fileUrl           // Raw GitHub URL to the PDF
+    anchor.download = "ritesh_resume_2025.pdf"  // Desired download file name
+    document.body?.appendChild(anchor)
+    anchor.click()
+    document.body?.removeChild(anchor)
+}
+
 @Composable
 fun EmailAndResume(ctx: PageContext) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         EmailButton(ctx)
-        DownloadResume(ctx)
+        DownloadResumeFromGitHub(ctx)
     }
 }
 
