@@ -18,6 +18,30 @@ fun getElgoProject() = Project(
     getElgoProjectImages()
 )
 
+fun getBoilerplateProjectImages() = listOf(
+
+    Pair(Res.Images.BOILERPLATE_BANNER, Constants.PROJECT_BOILERPLATE_URL),
+)
+
+fun getBoilerplateProject() = Project(
+    Constants.BOILERPLATE_TITLE,
+    Constants.BOILERPLATE_SECTION_TEXT,
+    getBoilerplateProjectImages()
+)
+
+fun getGcodeProjectImages() = listOf(
+
+    Pair(Res.Images.GCODE_BANNER, Constants.PROJECT_GCODE_URL),
+    Pair(Res.Images.GCODE_ONE_BANNER, Constants.PROJECT_GCODE_URL),
+    Pair(Res.Images.GCODE_TWO_BANNER, Constants.PROJECT_GCODE_URL),
+)
+
+fun getGcodeProject() = Project(
+    Constants.GCODE_TITLE,
+    Constants.GCODE_SECTION_TEXT,
+    getGcodeProjectImages()
+)
+
 fun getPhotographProject() = Project(
     Constants.PHOTOGRAPH_TITLE,
     Constants.PHOTOGRAPH_SECTION_TEXT,
@@ -42,8 +66,8 @@ fun getPhotographProjectImages() = listOf(
 
 fun getProCodeProjectImages() = listOf(
 
-    Pair(Res.Images.PROCODE_1, Constants.PROJECT_ELGORITHM_URL),
-    Pair(Res.Images.PROCODE_2, Constants.PROJECT_ELGORITHM_URL),
+    Pair(Res.Images.PROCODE_1, Constants.PROJECT_PROCODE_URL),
+    Pair(Res.Images.PROCODE_2, Constants.PROJECT_PROCODE_URL),
 )
 
 fun getProCodeProject() = Project(
@@ -56,7 +80,7 @@ fun getAllWorkExperience() = listOf(
         sequenceNumber = "01",
         role = "Co-Founder & Lead Developer",
         organization = "EMI Shield",
-        duration = "AUG 22 - Present",
+        duration = "JAN 23 - Present",
         experienceHighlights = getEmiShieldExperienceHighlights()
     ),
     WorkExperience(
@@ -72,7 +96,7 @@ fun getAllWorkExperience() = listOf(
         role = "SDE-1",
         organization = "99roomz.LLP",
         duration = "MAR 19 - Mar 21",
-        experienceHighlights = get99RoomzExperienceHighlights()
+        experienceHighlights = getRoomzAndTripsExperienceHighlights()
     ),
     WorkExperience(
         sequenceNumber = "04",
@@ -102,45 +126,58 @@ fun getAllPhotographs() =
         )
 
 fun getEmiShieldExperienceHighlights() = listOf(
-    "Developed an Android application for device management upon EMI non-payment, utilizing Device Policy Manager API and MVVM architecture for scalable and maintainable code.",
-    "Designed and implemented key features:",
-    "   - Offline/Online device locking",
-    "   - Live location tracking",
-    "   - Factory Reset Protection (FRP)",
-    "   - Audio/video payment reminders",
-    "Integrated backend with Firebase, leveraging:",
-    "   - Firestore for secure data handling",
-    "   - FCM for real-time notifications",
-    "Automated APK deployment via CI/CD pipelines for seamless app delivery.",
-    "Aligned technical implementation with product vision, optimizing user experience and incorporating market-specific needs."
+    "Founded EMI Shield and architected a remote-locking SDK enforcing EMI compliance across Android devices",
+    "Integrated FCM for secure real-time user control; registered 90K+ devices/month with wide Android compatibility",
+    "Partnered with 18+ merchants, generating ₹10L+ monthly revenue via freemium-to-subscription model",
+    "Engineered multi-modular architecture with parallel Gradle builds; reduced build time by 40%",
+    "Implemented Communication SDK with persistent FCM and SMS fallback; 90%+ remote command delivery rate",
+    "Built Location SDK with optimized battery algorithms powering 90K+ active devices/month",
+    "Developed Auto-Deploy Gradle plugin enabling real-time remote app installation across thousands of devices",
+    "Designed reusable REST SDK with coroutines, Flow, and MVI for high-velocity modular development",
+    "Integrated Ktor server for secure device-dashboard communication; onboarded 18+ vendors with ₹10L+ MRR"
 )
 
 fun getCashifyExperienceHighlights() = listOf(
-    "Designed Android hardware tests for camera, speaker, mic, and display.",
-    "Developed an app to detect front and back panel cracks.",
-    "Built a Flutter macOS application for unrecoverable phone data wiping.",
-    "Created SDKs for runtime localization of Android apps.",
-    "Managed multi-module app development and CI/CD build automation.",
-    "Optimized Android build time and project version management."
+    // Scratch Detection SDK Highlights
+    "Built Scratch Detection SDK for analyzing screen/panel scratches on pre-owned devices using dual-phone coordination and QR code pairing",
+    "Designed custom camera workflow for high-resolution, clutter-free panel image capture suitable for ML training",
+    "Optimized camera framing and focus using pixel ratios, focal length, and perspective correction for precise bounding box detection",
+    "Accelerated image pipeline with Kotlin coroutines and Flow; achieved 75% latency reduction and high-fidelity outputs",
+    "Reduced APK size by 60% via ProGuard, asset pruning, and WebP usage; improved CI/CD efficiency and build times by 35–40%",
+    "Developed scalable socket infrastructure for asynchronous communication and telemetry sync during inspections",
+
+    // Software Engineer I - Mobile Highlights
+    "Implemented Secure Wipe Algorithm with configurable multi-pass data erasure and randomized overwrite patterns; achieved 40% faster wipe throughput",
+    "Built Dynamic Translation SDK allowing runtime language switching and remote updates via getString() override; avoided Play Store redeployments",
+    "Developed Device Quality Assessment SDK for automated diagnostics of SIM, WiFi, speaker, mic, and display using native Android services; enabled telemetry-based dynamic pricing"
 )
 
-fun get99RoomzExperienceHighlights(): List<String> {
-    return listOf(
-        "Improved app speed by 40% through optimization efforts.",
-        "Redesigned the UI for the company app, enhancing usability and aesthetics.",
-        "Developed 99Tripz, a new feature section for the company.",
-        "Enhanced app architecture for better performance and scalability.",
-        "Managed both frontend and backend development.",
-        "Implemented exclusive features like live videos for better user engagement.",
-        "Contributed to the design and development of the Phunk App."
-    )
-}
+
+fun getRoomzAndTripsExperienceHighlights() = listOf(
+    // 99 Roomz App Revamp
+    "Migrated legacy architecture to MVVM with LiveData, enhancing scalability and modularity",
+    "Refactored screens using Epoxy framework into server-driven UI; enabled dynamic layout rendering from backend configs",
+    "Reduced manual app updates and improved adaptability to remote content changes",
+
+    // 99 Trips Feature Integration
+    "Developed international travel booking module with itinerary listings, filters, and trip previews",
+    "Implemented vertical media carousel similar to Instagram Reels; boosted booking conversion rate by 18% through visual storytelling",
+
+    // Live Streaming SDK
+    "Built reusable live video streaming SDK using RTMP and AWS MediaPackage for one-to-many broadcasts",
+    "Achieved improved reliability across diverse Android devices via scalable infrastructure"
+)
+
+
 
 fun getCorpzoneExperienceHighlights(): List<String> {
     return listOf(
-        "Developed an app for reposting Instagram feed posts.",
-        "Enhanced the company app with new features and tutorial sections.",
-        "Created DIY IoT projects for the company website to showcase innovation.",
-        "Trained students on various technology topics, fostering skill development."
+        // Instagram Repost Utility
+        "Built Android utility app to automate Instagram reposts using clipboard link parsing and background image pre-processing",
+        "Enabled seamless post creation and sharing through intent-based workflow, streamlining user experience",
+
+        // Tutorial App Revamp
+        "Revamped educational app UI to enhance clarity and readability for long-form study sessions",
+        "Optimized typography and layout for improved user engagement and focus during extended use"
     )
 }

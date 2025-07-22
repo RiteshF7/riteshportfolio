@@ -126,7 +126,6 @@ fun EmailAndResume(ctx: PageContext) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         EmailButton(ctx)
         DownloadResume(ctx)
-        ResumeButton()
     }
 }
 

@@ -3,15 +3,20 @@ package com.binayshaw7777.kotfolio.utils
 object Constants {
     const val RESUME_URL =
         "https://riteshresume.vercel.app/"
-    const val LINKEDIN_URL = "https://www.linkedin.com/in/sohlot163/"
+    const val LINKEDIN_URL = "https://www.linkedin.com/in/riteshf1"
     const val GITHUB_URL = "https://github.com/RiteshF7"
     const val TWITTER_URL = "https://twitter.com/binayplays7777"
     const val BEHANCE_URL = "https://www.behance.net/GAMIX7"
     const val MEDIUM_URL = "https://medium.com/@binayshaw7777"
-    const val MAIL_TO = "mailto:riteshf7@gmail.com"
-    const val DOWNLOAD_RESUME = "https://raw.githubusercontent.com/RiteshF7/riteshresume/master/ritesh_resume_2025.pdf"
+    const val MAIL_TO = "mailto:iamritesh.dev@gmail.com"
+    const val DOWNLOAD_RESUME =
+        "https://raw.githubusercontent.com/RiteshF7/riteshportfolio/master/ritesh_resume_2025.pdf"
     const val PROJECT_READBUD_URL = "https://github.com/binayshaw7777/ReadBud"
     const val PROJECT_ELGORITHM_URL = "https://github.com/RiteshF7/elgorithm-web.git"
+    const val PROJECT_PROCODE_URL = "https://github.com/RiteshF7/ProCode.git"
+    const val PROJECT_BOILERPLATE_URL = "https://github.com/RiteshF7/AndroidBoilderplateWizard.git"
+    const val PROJECT_GCODE_URL = "https://github.com/RiteshF7/gcodeAutomation.git"
+
     const val PROJECT_JUSTAP_URL = "https://github.com/binayshaw7777/JusTap"
     const val PROJECT_MEDIFY_URL = "https://github.com/binayshaw7777/Medify"
     const val PROJECT_PASSGENIE_URL = "https://github.com/binayshaw7777/PassGinie-Kobweb"
@@ -55,6 +60,18 @@ object Constants {
                 "Procode takes coding education to the next level by supporting both Blockly and MicroPython, offering flexibility for beginners and experienced developers alike. With real-time hardware simulations, Blockly code generation, and engaging challenges, Procode transforms learning into an interactive, hands-on experience.  \n" +
                 "\n" +
                 "\"Build, code, and innovate—no soldering required!\"  \n"
+
+    const val BOILERPLATE_TITLE = "Android Boilerplate Wizard"
+    const val BOILERPLATE_SECTION_TEXT =
+        """
+            SimpleSample is a comprehensive Android boilerplate repository designed to eliminate the repetitive setup process when starting new Android projects. Instead of writing the same boilerplate code repeatedly, developers can simply merge feature branches to quickly add commonly used functionalities like dependency injection, networking, database integration, and more.
+        """
+
+    const val GCODE_TITLE = "G CODE AUTOMATION"
+    const val GCODE_SECTION_TEXT =
+        """
+            This project automates batch 3D printing by generating dynamic G-code files and controlling OctoPrint-enabled printers via REST API. It supports configurable repeat printing, Z-axis offsets, and custom temperature settings for high-volume production.
+        """
 
     const val PROJECT_REPOSITORIES_URL = "https://github.com/RiteshF7"
     const val MORE_ON_GITHUB = "More on GitHub."

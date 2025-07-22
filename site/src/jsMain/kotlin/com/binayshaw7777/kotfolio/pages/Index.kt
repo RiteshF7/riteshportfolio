@@ -8,8 +8,9 @@ import com.binayshaw7777.kotfolio.components.sections.Home
 import com.binayshaw7777.kotfolio.components.sections.Project
 import com.binayshaw7777.kotfolio.components.sections.SkillsAndTools
 import com.binayshaw7777.kotfolio.utils.Res
+import com.binayshaw7777.kotfolio.utils.getBoilerplateProject
 import com.binayshaw7777.kotfolio.utils.getElgoProject
-import com.binayshaw7777.kotfolio.utils.getPhotographProject
+import com.binayshaw7777.kotfolio.utils.getGcodeProject
 import com.binayshaw7777.kotfolio.utils.getProCodeProject
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -43,6 +44,10 @@ fun HomePage() {
                     Project(getElgoProject())
 
                     Project(getProCodeProject())
+
+                    Project(getBoilerplateProject())
+
+                    Project(getGcodeProject())
 
 //                    Project(getPhotographProject())
 
