@@ -5,11 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.binayshaw7777.kotfolio.components.styles.ButtonStyle
-import com.binayshaw7777.kotfolio.components.widgets.AppearanceAwareImage
-import com.binayshaw7777.kotfolio.components.widgets.IconButtonNoHover
 import com.binayshaw7777.kotfolio.utils.Constants
-import com.binayshaw7777.kotfolio.utils.CustomColorSchemes
 import com.binayshaw7777.kotfolio.utils.Res
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.TextAlign
@@ -30,10 +26,9 @@ import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
+import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.core.rememberPageContext
-import com.varabyte.kobweb.silk.components.forms.Button
-import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -45,6 +40,7 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.dpi
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.w3c.dom.HTMLAnchorElement
@@ -74,36 +70,38 @@ fun Footer(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
 
 @Composable
 fun EmailButton(ctx: PageContext) {
-    Button(
-        onClick = {
-            ctx.router.navigateTo(Constants.MAIL_TO)
-        },
-        colorScheme = CustomColorSchemes.BlackAndWhite,
-        size = ButtonSize.MD,
-        modifier = ButtonStyle.toModifier().margin(right = 20.px)
-    ) {
-        SpanText(
-            text = "Email",
-            modifier = Modifier.fontFamily(Res.Fonts.DM_SANS)
-        )
-    }
+    Link(
+        path = Constants.MAIL_TO,
+        text = "EMAIL ME ⮚    ",
+        modifier = Modifier
+            .fontFamily(Res.Fonts.DM_SANS)
+            .color(
+                when (ColorMode.current) {
+                    ColorMode.LIGHT -> Colors.Black
+                    ColorMode.DARK -> Colors.White
+                }
+            )
+            .margin(right = 4.px)
+    )
+
 }
 
 @Composable
 fun DownloadResumeFromGitHub(ctx: PageContext) {
-    Button(
-        onClick = {
-            triggerGitHubDownload(Constants.DOWNLOAD_RESUME)
-        },
-        colorScheme = CustomColorSchemes.BlackAndWhite,
-        size = ButtonSize.MD,
-        modifier = ButtonStyle.toModifier().margin(right = 20.px)
-    ) {
-        SpanText(
-            text = "Download Resume",
-            modifier = Modifier.fontFamily(Res.Fonts.DM_SANS)
-        )
-    }
+    Link(
+        path = Constants.DOWNLOAD_RESUME,
+        text = "Resume ⮚",
+        modifier = Modifier
+            .fontFamily(Res.Fonts.DM_SANS)
+            .color(
+                when (ColorMode.current) {
+                    ColorMode.LIGHT -> Colors.Black
+                    ColorMode.DARK -> Colors.White
+                }
+            )
+            .margin(right = 4.px)
+    )
+
 }
 
 
@@ -197,31 +195,38 @@ fun NetworkingIconButtons(ctx: PageContext, modifier: Modifier = Modifier) {
         modifier = modifier,
         numColumns = numColumns(base = 5)
     ) {
+        Link(
+            path = Constants.LINKEDIN_URL,
+            text = "LinkedIn ⮚    ",
+            modifier = Modifier
+                .fontFamily(Res.Fonts.DM_SANS)
+                .color(
+                    when (ColorMode.current) {
+                        ColorMode.LIGHT -> Colors.Black
+                        ColorMode.DARK -> Colors.White
+                    }
+                )
+                .margin(right = 4.px)
+        )
+        Link(
+            path = Constants.GITHUB_URL,
+            text = "Github ⮚",
+            modifier = Modifier
+                .fontFamily(Res.Fonts.DM_SANS)
+                .color(
+                    when (ColorMode.current) {
+                        ColorMode.LIGHT -> Colors.Black
+                        ColorMode.DARK -> Colors.White
+                    }
+                )
+                .margin(right = 14.px)
+        )
 
-        IconButtonNoHover(
-            onClick = { ctx.router.navigateTo(Constants.LINKEDIN_URL) }
-        ) {
-            AppearanceAwareImage(src = Res.Images.LINKEDIN)
-        }
-        IconButtonNoHover(
-            onClick = { ctx.router.navigateTo(Constants.GITHUB_URL) }
-        ) {
-            AppearanceAwareImage(src = Res.Images.GITHUB)
-        }
 //        IconButtonNoHover(
 //            onClick = { ctx.router.navigateTo(Constants.TWITTER_URL) }
 //        ) {
 //            AppearanceAwareImage(src = Res.Images.TWITTER_X)
 //        }
-//        IconButtonNoHover(
-//            onClick = { ctx.router.navigateTo(Constants.BEHANCE_URL) }
-//        ) {
-//            AppearanceAwareImage(src = Res.Images.BEHANCE)
-//        }
-//        IconButtonNoHover(
-//            onClick = { ctx.router.navigateTo(Constants.MEDIUM_URL) }
-//        ) {
-//            AppearanceAwareImage(src = Res.Images.MEDIUM)
-//        }
+
     }
 }

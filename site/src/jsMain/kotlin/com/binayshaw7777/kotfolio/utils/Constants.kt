@@ -8,7 +8,8 @@ object Constants {
     const val TWITTER_URL = "https://twitter.com/binayplays7777"
     const val BEHANCE_URL = "https://www.behance.net/GAMIX7"
     const val MEDIUM_URL = "https://medium.com/@binayshaw7777"
-    const val MAIL_TO = "mailto:iamritesh.dev@gmail.com"
+    const val MAIL = "iamritesh.dev@gmail.com"
+    const val MAIL_TO = "mailto:${MAIL}"
     const val DOWNLOAD_RESUME =
         "https://raw.githubusercontent.com/RiteshF7/riteshportfolio/master/ritesh_resume_2025.pdf"
     const val PROJECT_READBUD_URL = "https://github.com/binayshaw7777/ReadBud"
